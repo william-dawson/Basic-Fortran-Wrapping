@@ -5,7 +5,7 @@ code up to high level scripting languages.
 
 ## Citation
 
-This work is based off the following paper: [Exposing Fortran Derived Types to C and Other Languages] (http://ieeexplore.ieee.org/abstract/document/4548209/)
+This work is based off the paper "Exposing Fortran Derived Types to C and Other Languages": http://ieeexplore.ieee.org/abstract/document/4548209/
 
 Here is the bibtex reference:
 
