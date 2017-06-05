@@ -9,12 +9,14 @@ This work is based off the paper "Exposing Fortran Derived Types to C and Other 
 
 Here is the bibtex reference:
 
->@article{pletzer2008exposing,
->  title={Exposing Fortran derived types to C and other languages},
->  author={Pletzer, Alexander and McCune, Douglas and Muszala, Stefan and Vadlamani, Srinath and Kruger, Scott},
->  journal={Computing in Science \& Engineering},
->  volume={10},
->  number={4},
->  year={2008},
->  publisher={IEEE}
->}
+```
+@article{pletzer2008exposing,
+  title={Exposing Fortran derived types to C and other languages},
+  author={Pletzer, Alexander and McCune, Douglas and Muszala, Stefan and Vadlamani, Srinath and Kruger, Scott},
+  journal={Computing in Science \& Engineering},
+  volume={10},
+  number={4},
+  year={2008},
+  publisher={IEEE}
+}
+```
