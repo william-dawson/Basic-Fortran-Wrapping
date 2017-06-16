@@ -1,0 +1,30 @@
+import FWSwig as fw
+from mpi4py import MPI
+import sys
+import random
+
+comm = MPI.COMM_WORLD
+
+if __name__ == "__main__":
+  my_rank = comm.Get_rank()
+
+  ## Process Parameters
+  matrix_length_s = "--matrix_length"
+  values_to_add_s = "--values_to_add"
+  for i in range(1,len(sys.argv),2):
+    if sys.argv[i] == matrix_length_s:
+      matrix_length = int(sys.argv[i+1])
+    elif sys.argv[i] == values_to_add_s:
+      values_to_add = int(sys.argv[i+1])
+
+  ## Build and Set
+  DA = fw.DistributedArray(matrix_length)
+  next_value = 1.0
+  for i in range(0,values_to_add):
+    next_location = random.randint(0,matrix_length) + 1
+    DA.Set(next_location,next_value)
+
+  ## Sum and Print
+  sum_value = DA.Sum()
+  if my_rank == 0:
+    print "Sum value", sum_value
